@@ -5,14 +5,14 @@
 
     /* PHPUnit light/dark colors */
     --phpunit-breadcrumbs: light-dark(var(--bs-gray-200), var(--bs-gray-800));
-    --phpunit-success-bar: light-dark(#28a745 ,#1f8135);
-    --phpunit-success-high: light-dark(#99cb84, #3d5c4e);
-    --phpunit-success-medium: light-dark(#c3e3b5,#3c6051);
-    --phpunit-success-low: light-dark(#dff0d8, #2d4431);
-    --phpunit-warning: light-dark(#fcf8e3, #3e3408);
-    --phpunit-warning-bar: light-dark(#ffc107 ,#c19406);
-    --phpunit-danger: light-dark(#f2dede, #42221e);
-    --phpunit-danger-bar: light-dark(#dc3545, #a62633);
+    --phpunit-success-bar: light-dark(#1a73b4, #1560a0);
+    --phpunit-success-high: light-dark(#8cb4d5, #2a4a6b);
+    --phpunit-success-medium: light-dark(#b3d1e8, #2d4f6e);
+    --phpunit-success-low: light-dark(#d6e6f2, #1e3550);
+    --phpunit-warning: light-dark(#fdf0d5, #3d3010);
+    --phpunit-warning-bar: light-dark(#e5a100, #b88a00);
+    --phpunit-danger: light-dark(#fad4c0, #4a2a10);
+    --phpunit-danger-bar: light-dark(#d45500, #b54400);
 
     /* Bootstrap v5.3 default colors (light, dark) */
     --bs-body-bg-rgb: 255, 255, 255;
@@ -271,4 +271,17 @@ table#code td:first-of-type a {
 
 .progress-bar.bg-danger {
  background-color: var(--phpunit-danger-bar) !important;
+}
+
+.file-coverage-chart {
+ width: 100%;
+ max-width: 900px;
+}
+
+.dashboard-row {
+ margin-top: 2rem;
+}
+
+.dashboard-column .scrollbox {
+ height: 400px;
 }

@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <title>Dashboard for /home/runner/work/Lucent/Lucent/src/Lucent/StaticAnalysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../../_css/bootstrap.min.css?v=12.5.1" rel="stylesheet" type="text/css">
-  <link href="../../_css/billboard.min.css?v=12.5.1" rel="stylesheet" type="text/css">
-  <link href="../../_css/style.css?v=12.5.1" rel="stylesheet" type="text/css">
+  <link href="../../_css/bootstrap.min.css?v=14.0.0" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css?v=14.0.0" rel="stylesheet" type="text/css">
   <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
  </head>
  <body>
@@ -28,311 +27,176 @@
    </div>
   </header>
   <div class="container-fluid">
-   <div class="row">
-    <div class="col-md-12">
-     <h2>Classes</h2>
-    </div>
-   </div>
-   <div class="row">
+   <div class="row dashboard-row">
     <div class="col-md-6">
-     <h3>Coverage Distribution</h3>
-     <div id="classesCoverageDistribution" style="height: 300px;">
-       <svg></svg>
+     <h3>Classes</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="240.0" x2="780" y2="240.0" class="chart-grid"/>
+ <text x="52" y="240.0" text-anchor="end" dominant-baseline="middle" class="chart-label">50</text>
+ <line x1="60" y1="130.0" x2="780" y2="130.0" class="chart-grid"/>
+ <text x="52" y="130.0" text-anchor="end" dominant-baseline="middle" class="chart-label">100</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">150</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="DependencyAnalyser.php.html#21"><circle cx="60.0" cy="103.6" r="20.0" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser — Coverage: 0.0% | Lines: 430 | Complexity: 112</title></circle></a>
+ <a href="ReflectionHelpers.php.html#12"><circle cx="60.0" cy="290.6" r="7.3" class="bubble-danger"><title>Lucent\StaticAnalysis\ReflectionHelpers — Coverage: 0.0% | Lines: 58 | Complexity: 27</title></circle></a>
+ <a href="Analyser.php.html#14"><circle cx="60.0" cy="308.2" r="6.0" class="bubble-danger"><title>Lucent\StaticAnalysis\Analyser — Coverage: 0.0% | Lines: 39 | Complexity: 19</title></circle></a>
+</svg>
      </div>
     </div>
-    <div class="col-md-6">
-     <h3>Complexity</h3>
-     <div id="classComplexity" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3 style="margin-top: 2rem;">Insufficient Coverage</h3>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
      <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Class</th>
-         <th class="text-right">Coverage</th>
-        </tr>
-       </thead>
-       <tbody>
-       <tr><td><a href="Analyser.php.html#14">Lucent\StaticAnalysis\Analyser</a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#21">Lucent\StaticAnalysis\DependencyAnalyser</a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#12">Lucent\StaticAnalysis\ReflectionHelpers</a></td><td class="text-right">0%</td></tr>
-
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3 style="margin-top: 2rem;">Project Risks</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Class</th>
-         <th class="text-right">Coverage</th>
-         <th class="text-right">Complexity</th>
-         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-        </tr>
-       </thead>
-       <tbody>
-       <tr><td><a href="DependencyAnalyser.php.html#21">Lucent\StaticAnalysis\DependencyAnalyser</a></td><td class="text-right">0.0%</td><td class="text-right">112</td><td class="text-right">12656</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#12">Lucent\StaticAnalysis\ReflectionHelpers</a></td><td class="text-right">0.0%</td><td class="text-right">27</td><td class="text-right">756</td></tr>
-       <tr><td><a href="Analyser.php.html#14">Lucent\StaticAnalysis\Analyser</a></td><td class="text-right">0.0%</td><td class="text-right">19</td><td class="text-right">380</td></tr>
-
-       </tbody>
-      </table>
+<table class="table">
+ <thead>
+  <tr>
+   <th>Class</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="DependencyAnalyser.php.html#21">Lucent\StaticAnalysis\DependencyAnalyser</a></td><td class="text-right">12656</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ReflectionHelpers.php.html#12">Lucent\StaticAnalysis\ReflectionHelpers</a></td><td class="text-right">756</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Analyser.php.html#14">Lucent\StaticAnalysis\Analyser</a></td><td class="text-right">380</td><td class="text-right">0.0%</td></tr>
+ </tbody>
+</table>
      </div>
     </div>
    </div>
-   <div class="row">
-    <div class="col-md-12">
-     <h2 style="margin-top: 3rem;">Methods</h2>
-    </div>
-   </div>
-   <div class="row">
+   <div class="row dashboard-row">
     <div class="col-md-6">
-     <h3>Coverage Distribution</h3>
-     <div id="methodsCoverageDistribution" style="height: 300px;">
-       <svg></svg>
+     <h3>Methods</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="284.0" x2="780" y2="284.0" class="chart-grid"/>
+ <text x="52" y="284.0" text-anchor="end" dominant-baseline="middle" class="chart-label">10</text>
+ <line x1="60" y1="218.0" x2="780" y2="218.0" class="chart-grid"/>
+ <text x="52" y="218.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
+ <line x1="60" y1="152.0" x2="780" y2="152.0" class="chart-grid"/>
+ <text x="52" y="152.0" text-anchor="end" dominant-baseline="middle" class="chart-label">30</text>
+ <line x1="60" y1="86.0" x2="780" y2="86.0" class="chart-grid"/>
+ <text x="52" y="86.0" text-anchor="end" dominant-baseline="middle" class="chart-label">40</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">50</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="DependencyAnalyser.php.html#91"><circle cx="60.0" cy="53.0" r="20.0" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::run — Coverage: 0.0% | Lines: 207 | Complexity: 45</title></circle></a>
+ <a href="DependencyAnalyser.php.html#518"><circle cx="60.0" cy="290.6" r="11.8" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::getMethodDetails — Coverage: 0.0% | Lines: 72 | Complexity: 9</title></circle></a>
+ <a href="DependencyAnalyser.php.html#719"><circle cx="60.0" cy="191.6" r="11.2" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::printCompatibilityCheck — Coverage: 0.0% | Lines: 65 | Complexity: 24</title></circle></a>
+ <a href="ReflectionHelpers.php.html#91"><circle cx="60.0" cy="237.8" r="8.5" class="bubble-danger"><title>Lucent\StaticAnalysis\ReflectionHelpers::getArguments — Coverage: 0.0% | Lines: 37 | Complexity: 17</title></circle></a>
+ <a href="DependencyAnalyser.php.html#459"><circle cx="60.0" cy="317.0" r="7.4" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::checkClass — Coverage: 0.0% | Lines: 28 | Complexity: 5</title></circle></a>
+ <a href="DependencyAnalyser.php.html#635"><circle cx="60.0" cy="297.2" r="6.8" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::processChain — Coverage: 0.0% | Lines: 24 | Complexity: 8</title></circle></a>
+ <a href="Analyser.php.html#163"><circle cx="60.0" cy="264.2" r="6.4" class="bubble-danger"><title>Lucent\StaticAnalysis\Analyser::run — Coverage: 0.0% | Lines: 21 | Complexity: 13</title></circle></a>
+ <a href="Analyser.php.html#107"><circle cx="60.0" cy="323.6" r="5.4" class="bubble-danger"><title>Lucent\StaticAnalysis\Analyser::onToken — Coverage: 0.0% | Lines: 15 | Complexity: 4</title></circle></a>
+ <a href="DependencyAnalyser.php.html#687"><circle cx="60.0" cy="284.0" r="5.2" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::processOutput — Coverage: 0.0% | Lines: 14 | Complexity: 10</title></circle></a>
+ <a href="ReflectionHelpers.php.html#22"><circle cx="60.0" cy="297.2" r="5.2" class="bubble-danger"><title>Lucent\StaticAnalysis\ReflectionHelpers::getTypeString — Coverage: 0.0% | Lines: 14 | Complexity: 8</title></circle></a>
+ <a href="DependencyAnalyser.php.html#850"><circle cx="60.0" cy="303.8" r="5.0" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::processDependencies — Coverage: 0.0% | Lines: 13 | Complexity: 7</title></circle></a>
+ <a href="ReflectionHelpers.php.html#61"><circle cx="60.0" cy="336.8" r="4.0" class="bubble-danger"><title>Lucent\StaticAnalysis\ReflectionHelpers::extractDocTagMessage — Coverage: 0.0% | Lines: 7 | Complexity: 2</title></circle></a>
+ <a href="DependencyAnalyser.php.html#69"><circle cx="60.0" cy="330.2" r="4.0" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::parseFiles — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="DependencyAnalyser.php.html#56"><circle cx="60.0" cy="343.4" r="4.0" class="bubble-danger"><title>Lucent\StaticAnalysis\DependencyAnalyser::__construct — Coverage: 0.0% | Lines: 3 | Complexity: 1</title></circle></a>
+ <a href="Analyser.php.html#140"><circle cx="60.0" cy="343.4" r="4.0" class="bubble-danger"><title>Lucent\StaticAnalysis\Analyser::clear — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Analyser.php.html#152"><circle cx="60.0" cy="343.4" r="4.0" class="bubble-danger"><title>Lucent\StaticAnalysis\Analyser::onUnhandledToken — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+</svg>
      </div>
     </div>
-    <div class="col-md-6">
-     <h3>Complexity</h3>
-     <div id="methodComplexity" style="height: 300px;">
-       <svg></svg>
-     </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-6">
-     <h3 style="margin-top: 2rem;">Insufficient Coverage</h3>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
      <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Method</th>
-         <th class="text-right">Coverage</th>
-        </tr>
-       </thead>
-       <tbody>
-       <tr><td><a href="Analyser.php.html#107"><abbr title="Lucent\StaticAnalysis\Analyser::onToken">onToken</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Analyser.php.html#140"><abbr title="Lucent\StaticAnalysis\Analyser::clear">clear</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Analyser.php.html#152"><abbr title="Lucent\StaticAnalysis\Analyser::onUnhandledToken">onUnhandledToken</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Analyser.php.html#163"><abbr title="Lucent\StaticAnalysis\Analyser::run">run</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#56"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#69"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::parseFiles">parseFiles</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#91"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::run">run</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#459"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::checkClass">checkClass</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#518"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::getMethodDetails">getMethodDetails</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#635"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processChain">processChain</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#687"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processOutput">processOutput</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#719"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::printCompatibilityCheck">printCompatibilityCheck</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#850"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processDependencies">processDependencies</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#22"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::getTypeString">getTypeString</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#61"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::extractDocTagMessage">extractDocTagMessage</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#91"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::getArguments">getArguments</abbr></a></td><td class="text-right">0%</td></tr>
-
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <div class="col-md-6">
-     <h3 style="margin-top: 2rem;">Project Risks</h3>
-     <div class="scrollbox">
-      <table class="table">
-       <thead>
-        <tr>
-         <th>Method</th>
-         <th class="text-right">Coverage</th>
-         <th class="text-right">Complexity</th>
-         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-        </tr>
-       </thead>
-       <tbody>
-       <tr><td><a href="DependencyAnalyser.php.html#91"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::run">run</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">45</td><td class="text-right">2070</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#719"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::printCompatibilityCheck">printCompatibilityCheck</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">24</td><td class="text-right">600</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#91"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::getArguments">getArguments</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">17</td><td class="text-right">306</td></tr>
-       <tr><td><a href="Analyser.php.html#163"><abbr title="Lucent\StaticAnalysis\Analyser::run">run</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">13</td><td class="text-right">182</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#687"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processOutput">processOutput</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">10</td><td class="text-right">110</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#518"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::getMethodDetails">getMethodDetails</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">9</td><td class="text-right">90</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#635"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processChain">processChain</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">8</td><td class="text-right">72</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#22"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::getTypeString">getTypeString</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">8</td><td class="text-right">72</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#850"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::processDependencies">processDependencies</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">7</td><td class="text-right">56</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#459"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::checkClass">checkClass</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">5</td><td class="text-right">30</td></tr>
-       <tr><td><a href="Analyser.php.html#107"><abbr title="Lucent\StaticAnalysis\Analyser::onToken">onToken</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">4</td><td class="text-right">20</td></tr>
-       <tr><td><a href="DependencyAnalyser.php.html#69"><abbr title="Lucent\StaticAnalysis\DependencyAnalyser::parseFiles">parseFiles</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">3</td><td class="text-right">12</td></tr>
-       <tr><td><a href="ReflectionHelpers.php.html#61"><abbr title="Lucent\StaticAnalysis\ReflectionHelpers::extractDocTagMessage">extractDocTagMessage</abbr></a></td><td class="text-right">0.0%</td><td class="text-right">2</td><td class="text-right">6</td></tr>
-
-       </tbody>
-      </table>
+<table class="table">
+ <thead>
+  <tr>
+   <th>Method</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="DependencyAnalyser.php.html#91">Lucent\StaticAnalysis\DependencyAnalyser::run</a></td><td class="text-right">2070</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#719">Lucent\StaticAnalysis\DependencyAnalyser::printCompatibilityCheck</a></td><td class="text-right">600</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ReflectionHelpers.php.html#91">Lucent\StaticAnalysis\ReflectionHelpers::getArguments</a></td><td class="text-right">306</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Analyser.php.html#163">Lucent\StaticAnalysis\Analyser::run</a></td><td class="text-right">182</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#687">Lucent\StaticAnalysis\DependencyAnalyser::processOutput</a></td><td class="text-right">110</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#518">Lucent\StaticAnalysis\DependencyAnalyser::getMethodDetails</a></td><td class="text-right">90</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#635">Lucent\StaticAnalysis\DependencyAnalyser::processChain</a></td><td class="text-right">72</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ReflectionHelpers.php.html#22">Lucent\StaticAnalysis\ReflectionHelpers::getTypeString</a></td><td class="text-right">72</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#850">Lucent\StaticAnalysis\DependencyAnalyser::processDependencies</a></td><td class="text-right">56</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#459">Lucent\StaticAnalysis\DependencyAnalyser::checkClass</a></td><td class="text-right">30</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Analyser.php.html#107">Lucent\StaticAnalysis\Analyser::onToken</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#69">Lucent\StaticAnalysis\DependencyAnalyser::parseFiles</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ReflectionHelpers.php.html#61">Lucent\StaticAnalysis\ReflectionHelpers::extractDocTagMessage</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Analyser.php.html#140">Lucent\StaticAnalysis\Analyser::clear</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Analyser.php.html#152">Lucent\StaticAnalysis\Analyser::onUnhandledToken</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="DependencyAnalyser.php.html#56">Lucent\StaticAnalysis\DependencyAnalyser::__construct</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+ </tbody>
+</table>
      </div>
     </div>
    </div>
    <footer>
     <hr/>
     <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 12.5.1</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.15</a> and <a href="https://phpunit.de/">PHPUnit 12.5.3</a> at Fri Dec 12 5:35:13 UTC 2025.</small>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 14.0.0</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.19</a> and <a href="https://phpunit.de/">PHPUnit 13.1.1</a> at Thu Apr 9 9:49:39 UTC 2026.</small>
     </p>
    </footer>
   </div>
-  <script src="../../_js/billboard.pkgd.min.js?v=12.5.1" type="text/javascript"></script>
-  <script type="application/json" id="complexity_class">[[0,19,"Analyser.php.html#14","Lucent\\StaticAnalysis\\Analyser","380"],[0,112,"DependencyAnalyser.php.html#21","Lucent\\StaticAnalysis\\DependencyAnalyser","12656"],[0,27,"ReflectionHelpers.php.html#12","Lucent\\StaticAnalysis\\ReflectionHelpers","756"]]</script>
-  <script type="application/json" id="complexity_method">[[0,4,"Analyser.php.html#107","Lucent\\StaticAnalysis\\Analyser::onToken","20"],[0,1,"Analyser.php.html#140","Lucent\\StaticAnalysis\\Analyser::clear","2"],[0,1,"Analyser.php.html#152","Lucent\\StaticAnalysis\\Analyser::onUnhandledToken","2"],[0,13,"Analyser.php.html#163","Lucent\\StaticAnalysis\\Analyser::run","182"],[0,1,"DependencyAnalyser.php.html#56","Lucent\\StaticAnalysis\\DependencyAnalyser::__construct","2"],[0,3,"DependencyAnalyser.php.html#69","Lucent\\StaticAnalysis\\DependencyAnalyser::parseFiles","12"],[0,45,"DependencyAnalyser.php.html#91","Lucent\\StaticAnalysis\\DependencyAnalyser::run","2070"],[0,5,"DependencyAnalyser.php.html#459","Lucent\\StaticAnalysis\\DependencyAnalyser::checkClass","30"],[0,9,"DependencyAnalyser.php.html#518","Lucent\\StaticAnalysis\\DependencyAnalyser::getMethodDetails","90"],[0,8,"DependencyAnalyser.php.html#635","Lucent\\StaticAnalysis\\DependencyAnalyser::processChain","72"],[0,10,"DependencyAnalyser.php.html#687","Lucent\\StaticAnalysis\\DependencyAnalyser::processOutput","110"],[0,24,"DependencyAnalyser.php.html#719","Lucent\\StaticAnalysis\\DependencyAnalyser::printCompatibilityCheck","600"],[0,7,"DependencyAnalyser.php.html#850","Lucent\\StaticAnalysis\\DependencyAnalyser::processDependencies","56"],[0,8,"ReflectionHelpers.php.html#22","Lucent\\StaticAnalysis\\ReflectionHelpers::getTypeString","72"],[0,2,"ReflectionHelpers.php.html#61","Lucent\\StaticAnalysis\\ReflectionHelpers::extractDocTagMessage","6"],[0,17,"ReflectionHelpers.php.html#91","Lucent\\StaticAnalysis\\ReflectionHelpers::getArguments","306"]]</script>
-  <script type="text/javascript" defer>
-  const barLabels = [
-    '0%',
-    '0-10%',
-    '10-20%',
-    '20-30%',
-    '30-40%',
-    '40-50%',
-    '50-60%',
-    '60-70%',
-    '70-80%',
-    '80-90%',
-    '90-100%',
-    '100%'
-  ];
-  const barConfig = (name, fullName, values) => ({
-    axis: {
-      x: {
-        type: "category",
-        categories: barLabels,
-      },
-      y: {
-        label: {
-          text: `#${name}`,
-          position: 'outer-top',
-        },
-      },
-    },
-    bindto: `#${name}CoverageDistribution`,
-    data: {
-      columns: [
-        [fullName].concat(values),
-      ],
-      colors: {
-        [fullName]: "rgba(69, 114, 167, 0.75)",
-      },
-      type: "bar",
-    },
-    bar: {
-      width: {
-        ratio: 0.9,
-      },
-    },
-    grid: {
-      focus: {
-        show: false,
-      },
-      x: {
-        show: true,
-      },
-      y: {
-        show: true,
-      },
-    },
-    legend: {
-      show: false,
-    },
-    tooltip: {
-      contents: function (data) {
-        return `<table class="bb-tooltip"><tbody>
-            <tr><th colspan="2">Coverage ${barLabels[data[0].x]}</th></tr>
-            <tr><td class="value">${data[0].value} ${name}</td></tr>
-          </tbody></table>`;
-      },
-      grouped: false,
-    },
-  });
-  bb.generate(
-    barConfig('classes', "Class Coverage", [3,0,0,0,0,0,0,0,0,0,0,0])
-  );
-  bb.generate(
-    barConfig('methods', "Method Coverage", [16,0,0,0,0,0,0,0,0,0,0,0])
-  );
-
-  const scatterConfig = (name, complexityData) => ({
-    axis: {
-      x: {
-        label: {
-          text: 'Code Coverage (in percent)',
-          position: 'outer-right',
-        },
-        tick: {
-          values: [0, 20, 40, 60, 80, 100],
-        },
-      },
-      y: {
-        label: {
-          text: 'Cyclomatic Complexity',
-          position: 'outer-top',
-        },
-        min: 0,
-        padding: {
-          bottom: 0,
-          top: 5,
-        },
-      },
-    },
-    bindto: `#${name}Complexity`,
-    data: {
-      columns: [
-        ["complexity_x"].concat(complexityData.map(d => d[0])),
-        ["complexity"].concat(complexityData.map(d => d[1])),
-      ],
-      onclick: function(data, element) {
-        window.location = complexityData[data.index][2];
-      },
-      type: "scatter",
-      xs: {
-        "complexity": "complexity_x",
-      },
-    },
-    grid: {
-      focus: {
-        show: true,
-        y: true,
-      },
-      x: {
-        show: true,
-      },
-      y: {
-        show: true,
-      },
-    },
-    legend: {
-      show: false,
-    },
-    tooltip: {
-      contents: function (data) {
-        const coverage = Math.round(data[0].x);
-        const complexity = data[0].value;
-        const targetName = complexityData[data[0].index][3];
-        const crap = complexityData[data[0].index][4];
-        return `<table class="bb-tooltip"><tbody>
-            <tr><th colspan="2">${targetName}</th></tr>
-            <tr class="bb-tooltip-name-complexity"><td>Coverage</td><td class="name">${coverage}%</td></tr>
-            <tr class="bb-tooltip-name-complexity"><td>Complexity</td><td class="value">${complexity}</td></tr>
-            <tr class="bb-tooltip-name-complexity"><td>Crap</td><td class="value">${crap}</td></tr>
-          </tbody></table>`;
-      },
-      grouped: false,
-    },
-  });
-  const classComplexityData = JSON.parse(document.getElementById('complexity_class').textContent);
-  bb.generate(
-    scatterConfig("class", classComplexityData)
-  );
-  const methodComplexityData = JSON.parse(document.getElementById('complexity_method').textContent);
-  bb.generate(
-    scatterConfig("method", methodComplexityData),
-  );
-  </script>
  </body>
 </html>
