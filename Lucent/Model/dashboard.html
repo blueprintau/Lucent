@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Dashboard for /home/runner/work/Lucent/Lucent/src/Lucent/Model</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../../_css/bootstrap.min.css?v=14.2.2" rel="stylesheet" type="text/css">
-  <link href="../../_css/style.css?v=14.2.2" rel="stylesheet" type="text/css">
+  <link href="../../_css/bootstrap.min.css?v=12.5.7" rel="stylesheet" type="text/css">
+  <link href="../../_css/billboard.min.css?v=12.5.7" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css?v=12.5.7" rel="stylesheet" type="text/css">
   <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
  </head>
  <body>
@@ -27,247 +28,331 @@
    </div>
   </header>
   <div class="container-fluid">
-   <div class="row dashboard-row">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
     <div class="col-md-6">
-     <h3>Classes</h3>
-     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
-     <div class="file-coverage-chart">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
- <style>
-  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
-  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
-  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
-  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
-  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
-  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
-  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
-  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
- </style>
- <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
- <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
- <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
- <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
- <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
- <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
- <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
- <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
- <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
- <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
- <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
- <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
- <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
- <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
- <line x1="60" y1="284.0" x2="780" y2="284.0" class="chart-grid"/>
- <text x="52" y="284.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
- <line x1="60" y1="218.0" x2="780" y2="218.0" class="chart-grid"/>
- <text x="52" y="218.0" text-anchor="end" dominant-baseline="middle" class="chart-label">40</text>
- <line x1="60" y1="152.0" x2="780" y2="152.0" class="chart-grid"/>
- <text x="52" y="152.0" text-anchor="end" dominant-baseline="middle" class="chart-label">60</text>
- <line x1="60" y1="86.0" x2="780" y2="86.0" class="chart-grid"/>
- <text x="52" y="86.0" text-anchor="end" dominant-baseline="middle" class="chart-label">80</text>
- <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
- <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">100</text>
- <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
- <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
- <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
- <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
- <a href="Model.php.html#11"><circle cx="622.0" cy="109.1" r="20.0" class="bubble-warning"><title>Lucent\Model\Model — Coverage: 78.0% | Lines: 205 | Complexity: 73</title></circle></a>
- <a href="Collection.php.html#9"><circle cx="703.3" cy="145.4" r="18.2" class="bubble-warning"><title>Lucent\Model\Collection — Coverage: 89.3% | Lines: 169 | Complexity: 62</title></circle></a>
- <a href="Column.php.html#10"><circle cx="665.2" cy="194.9" r="11.6" class="bubble-warning"><title>Lucent\Model\Column — Coverage: 84.1% | Lines: 69 | Complexity: 47</title></circle></a>
-</svg>
+     <h3>Coverage Distribution</h3>
+     <div id="classesCoverageDistribution" style="height: 300px;">
+       <svg></svg>
      </div>
     </div>
-    <div class="col-md-6 dashboard-column">
-     <h3>&nbsp;</h3>
-     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
-     <div class="scrollbox">
-<table class="table">
- <thead>
-  <tr>
-   <th>Class</th>
-   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-   <th class="text-right">Coverage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr><td><a href="Model.php.html#11">Lucent\Model\Model</a></td><td class="text-right">129.37</td><td class="text-right">78.0%</td></tr>
-  <tr><td><a href="Collection.php.html#9">Lucent\Model\Collection</a></td><td class="text-right">66.64</td><td class="text-right">89.3%</td></tr>
-  <tr><td><a href="Column.php.html#10">Lucent\Model\Column</a></td><td class="text-right">55.95</td><td class="text-right">84.1%</td></tr>
-  <tr><td><a href="ColumnType.php.html#5">Lucent\Model\ColumnType</a></td><td class="text-right">0</td><td class="text-right">100.0%</td></tr>
- </tbody>
-</table>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
      </div>
     </div>
    </div>
-   <div class="row dashboard-row">
+   <div class="row">
     <div class="col-md-6">
-     <h3>Methods</h3>
-     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
-     <div class="file-coverage-chart">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
- <style>
-  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
-  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
-  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
-  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
-  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
-  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
-  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
-  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
- </style>
- <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
- <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
- <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
- <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
- <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
- <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
- <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
- <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
- <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
- <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
- <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
- <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
- <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
- <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
- <line x1="60" y1="240.0" x2="780" y2="240.0" class="chart-grid"/>
- <text x="52" y="240.0" text-anchor="end" dominant-baseline="middle" class="chart-label">10</text>
- <line x1="60" y1="130.0" x2="780" y2="130.0" class="chart-grid"/>
- <text x="52" y="130.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
- <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
- <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">30</text>
- <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
- <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
- <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
- <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
- <a href="Model.php.html#250"><circle cx="662.0" cy="141.0" r="20.0" class="bubble-warning"><title>Lucent\Model\Model::save — Coverage: 83.6% | Lines: 61 | Complexity: 19</title></circle></a>
- <a href="Collection.php.html#227"><circle cx="691.6" cy="86.0" r="19.3" class="bubble-warning"><title>Lucent\Model\Collection::buildQuery — Coverage: 87.7% | Lines: 57 | Complexity: 24</title></circle></a>
- <a href="Model.php.html#94"><circle cx="694.3" cy="273.0" r="16.6" class="bubble-warning"><title>Lucent\Model\Model::create — Coverage: 88.1% | Lines: 42 | Complexity: 7</title></circle></a>
- <a href="Model.php.html#35"><circle cx="441.2" cy="251.0" r="14.9" class="bubble-warning"><title>Lucent\Model\Model::delete — Coverage: 52.9% | Lines: 34 | Complexity: 9</title></circle></a>
- <a href="Collection.php.html#162"><circle cx="684.0" cy="306.0" r="9.9" class="bubble-warning"><title>Lucent\Model\Collection::get — Coverage: 86.7% | Lines: 15 | Complexity: 4</title></circle></a>
- <a href="Column.php.html#128"><circle cx="732.0" cy="295.0" r="9.9" class="bubble-success"><title>Lucent\Model\Column::fromProperty — Coverage: 93.3% | Lines: 15 | Complexity: 5</title></circle></a>
- <a href="Column.php.html#52"><circle cx="574.3" cy="273.0" r="9.6" class="bubble-warning"><title>Lucent\Model\Column::parseValues — Coverage: 71.4% | Lines: 14 | Complexity: 7</title></circle></a>
- <a href="Column.php.html#93"><circle cx="728.6" cy="273.0" r="9.6" class="bubble-success"><title>Lucent\Model\Column::validateColumn — Coverage: 92.9% | Lines: 14 | Complexity: 7</title></circle></a>
- <a href="Model.php.html#225"><circle cx="780.0" cy="273.0" r="9.6" class="bubble-success"><title>Lucent\Model\Model::getProperties — Coverage: 100.0% | Lines: 14 | Complexity: 7</title></circle></a>
- <a href="Model.php.html#193"><circle cx="720.0" cy="317.0" r="8.9" class="bubble-success"><title>Lucent\Model\Model::buildInsertQueryString — Coverage: 91.7% | Lines: 12 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#35"><circle cx="714.5" cy="317.0" r="8.5" class="bubble-success"><title>Lucent\Model\Collection::where — Coverage: 90.9% | Lines: 11 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#54"><circle cx="714.5" cy="317.0" r="8.5" class="bubble-success"><title>Lucent\Model\Collection::in — Coverage: 90.9% | Lines: 11 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#73"><circle cx="714.5" cy="317.0" r="8.5" class="bubble-success"><title>Lucent\Model\Collection::compare — Coverage: 90.9% | Lines: 11 | Complexity: 3</title></circle></a>
- <a href="Model.php.html#13"><circle cx="780.0" cy="306.0" r="8.5" class="bubble-success"><title>Lucent\Model\Model::hydrate — Coverage: 100.0% | Lines: 11 | Complexity: 4</title></circle></a>
- <a href="Collection.php.html#97"><circle cx="708.0" cy="317.0" r="8.1" class="bubble-success"><title>Lucent\Model\Collection::like — Coverage: 90.0% | Lines: 10 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#120"><circle cx="700.0" cy="317.0" r="7.7" class="bubble-warning"><title>Lucent\Model\Collection::orderBy — Coverage: 88.9% | Lines: 9 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#190"><circle cx="780.0" cy="317.0" r="7.7" class="bubble-success"><title>Lucent\Model\Collection::getFirst — Coverage: 100.0% | Lines: 9 | Complexity: 3</title></circle></a>
- <a href="Column.php.html#183"><circle cx="780.0" cy="240.0" r="7.2" class="bubble-success"><title>Lucent\Model\Column::postProcess — Coverage: 100.0% | Lines: 8 | Complexity: 10</title></circle></a>
- <a href="Model.php.html#363"><circle cx="780.0" cy="306.0" r="7.2" class="bubble-success"><title>Lucent\Model\Model::getDatabaseProperties — Coverage: 100.0% | Lines: 8 | Complexity: 4</title></circle></a>
- <a href="Model.php.html#381"><circle cx="510.0" cy="295.0" r="7.2" class="bubble-warning"><title>Lucent\Model\Model::getDatabasePrimaryKey — Coverage: 62.5% | Lines: 8 | Complexity: 5</title></circle></a>
- <a href="Collection.php.html#24"><circle cx="780.0" cy="339.0" r="6.8" class="bubble-success"><title>Lucent\Model\Collection::__construct — Coverage: 100.0% | Lines: 7 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#338"><circle cx="780.0" cy="306.0" r="6.8" class="bubble-success"><title>Lucent\Model\Collection::class_uses_recursive — Coverage: 100.0% | Lines: 7 | Complexity: 4</title></circle></a>
- <a href="Column.php.html#164"><circle cx="780.0" cy="262.0" r="6.3" class="bubble-success"><title>Lucent\Model\Column::preProcess — Coverage: 100.0% | Lines: 6 | Complexity: 8</title></circle></a>
- <a href="Collection.php.html#137"><circle cx="780.0" cy="317.0" r="5.7" class="bubble-success"><title>Lucent\Model\Collection::formatColumnName — Coverage: 100.0% | Lines: 5 | Complexity: 3</title></circle></a>
- <a href="Column.php.html#80"><circle cx="348.0" cy="317.0" r="5.7" class="bubble-danger"><title>Lucent\Model\Column::parseReferences — Coverage: 40.0% | Lines: 5 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#330"><circle cx="780.0" cy="339.0" r="5.1" class="bubble-success"><title>Lucent\Model\Collection::registerTraitCondition — Coverage: 100.0% | Lines: 4 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#212"><circle cx="780.0" cy="339.0" r="4.4" class="bubble-success"><title>Lucent\Model\Collection::count — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#219"><circle cx="780.0" cy="339.0" r="4.4" class="bubble-success"><title>Lucent\Model\Collection::sum — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
- <a href="Column.php.html#33"><circle cx="780.0" cy="339.0" r="4.4" class="bubble-success"><title>Lucent\Model\Column::__construct — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#150"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Collection::limit — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#156"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Collection::offset — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
- <a href="Column.php.html#114"><circle cx="420.0" cy="317.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Column::validateLengthNonNull — Coverage: 50.0% | Lines: 2 | Complexity: 3</title></circle></a>
- <a href="Column.php.html#121"><circle cx="420.0" cy="317.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Column::validateEnumColumn — Coverage: 50.0% | Lines: 2 | Complexity: 3</title></circle></a>
- <a href="Collection.php.html#92"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Collection::orWhere — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#115"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Collection::orLike — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Collection.php.html#207"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Collection::collection — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#353"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Model::hasDatabaseProperty — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#397"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Model::where — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#401"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::orWhere — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#406"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::like — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#410"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::orLike — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#415"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Model::limit — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#420"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::offset — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#425"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::orderBy — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#430"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::count — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#435"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::sum — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#440"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::collection — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#445"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::get — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#450"><circle cx="60.0" cy="339.0" r="4.0" class="bubble-danger"><title>Lucent\Model\Model::getFirst — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#455"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Model::in — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
- <a href="Model.php.html#460"><circle cx="780.0" cy="339.0" r="4.0" class="bubble-success"><title>Lucent\Model\Model::compare — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
-</svg>
+     <h3 style="margin-top: 2rem;">Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Model.php.html#11">Lucent\Model\Model</a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="Collection.php.html#14">Lucent\Model\Collection</a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Column.php.html#10">Lucent\Model\Column</a></td><td class="text-right">84%</td></tr>
+
+       </tbody>
+      </table>
      </div>
     </div>
-    <div class="col-md-6 dashboard-column">
-     <h3>&nbsp;</h3>
-     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+    <div class="col-md-6">
+     <h3 style="margin-top: 2rem;">Project Risks</h3>
      <div class="scrollbox">
-<table class="table">
- <thead>
-  <tr>
-   <th>Method</th>
-   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
-   <th class="text-right">Coverage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr><td><a href="Collection.php.html#227">Lucent\Model\Collection::buildQuery</a></td><td class="text-right">25.07</td><td class="text-right">87.7%</td></tr>
-  <tr><td><a href="Model.php.html#250">Lucent\Model\Model::save</a></td><td class="text-right">20.59</td><td class="text-right">83.6%</td></tr>
-  <tr><td><a href="Model.php.html#35">Lucent\Model\Model::delete</a></td><td class="text-right">17.44</td><td class="text-right">52.9%</td></tr>
-  <tr><td><a href="Column.php.html#183">Lucent\Model\Column::postProcess</a></td><td class="text-right">10</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Column.php.html#52">Lucent\Model\Column::parseValues</a></td><td class="text-right">8.14</td><td class="text-right">71.4%</td></tr>
-  <tr><td><a href="Column.php.html#164">Lucent\Model\Column::preProcess</a></td><td class="text-right">8</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#94">Lucent\Model\Model::create</a></td><td class="text-right">7.08</td><td class="text-right">88.1%</td></tr>
-  <tr><td><a href="Column.php.html#93">Lucent\Model\Column::validateColumn</a></td><td class="text-right">7.02</td><td class="text-right">92.9%</td></tr>
-  <tr><td><a href="Model.php.html#225">Lucent\Model\Model::getProperties</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#381">Lucent\Model\Model::getDatabasePrimaryKey</a></td><td class="text-right">6.32</td><td class="text-right">62.5%</td></tr>
-  <tr><td><a href="Column.php.html#128">Lucent\Model\Column::fromProperty</a></td><td class="text-right">5.01</td><td class="text-right">93.3%</td></tr>
-  <tr><td><a href="Column.php.html#80">Lucent\Model\Column::parseReferences</a></td><td class="text-right">4.94</td><td class="text-right">40.0%</td></tr>
-  <tr><td><a href="Column.php.html#114">Lucent\Model\Column::validateLengthNonNull</a></td><td class="text-right">4.12</td><td class="text-right">50.0%</td></tr>
-  <tr><td><a href="Column.php.html#121">Lucent\Model\Column::validateEnumColumn</a></td><td class="text-right">4.12</td><td class="text-right">50.0%</td></tr>
-  <tr><td><a href="Collection.php.html#162">Lucent\Model\Collection::get</a></td><td class="text-right">4.04</td><td class="text-right">86.7%</td></tr>
-  <tr><td><a href="Collection.php.html#338">Lucent\Model\Collection::class_uses_recursive</a></td><td class="text-right">4</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#13">Lucent\Model\Model::hydrate</a></td><td class="text-right">4</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#363">Lucent\Model\Model::getDatabaseProperties</a></td><td class="text-right">4</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#35">Lucent\Model\Collection::where</a></td><td class="text-right">3.01</td><td class="text-right">90.9%</td></tr>
-  <tr><td><a href="Collection.php.html#54">Lucent\Model\Collection::in</a></td><td class="text-right">3.01</td><td class="text-right">90.9%</td></tr>
-  <tr><td><a href="Collection.php.html#73">Lucent\Model\Collection::compare</a></td><td class="text-right">3.01</td><td class="text-right">90.9%</td></tr>
-  <tr><td><a href="Collection.php.html#97">Lucent\Model\Collection::like</a></td><td class="text-right">3.01</td><td class="text-right">90.0%</td></tr>
-  <tr><td><a href="Collection.php.html#120">Lucent\Model\Collection::orderBy</a></td><td class="text-right">3.01</td><td class="text-right">88.9%</td></tr>
-  <tr><td><a href="Model.php.html#193">Lucent\Model\Model::buildInsertQueryString</a></td><td class="text-right">3.01</td><td class="text-right">91.7%</td></tr>
-  <tr><td><a href="Collection.php.html#137">Lucent\Model\Collection::formatColumnName</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#190">Lucent\Model\Collection::getFirst</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#92">Lucent\Model\Collection::orWhere</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Collection.php.html#156">Lucent\Model\Collection::offset</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Collection.php.html#207">Lucent\Model\Collection::collection</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#401">Lucent\Model\Model::orWhere</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#406">Lucent\Model\Model::like</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#410">Lucent\Model\Model::orLike</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#420">Lucent\Model\Model::offset</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#425">Lucent\Model\Model::orderBy</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#430">Lucent\Model\Model::count</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#435">Lucent\Model\Model::sum</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#440">Lucent\Model\Model::collection</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#445">Lucent\Model\Model::get</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Model.php.html#450">Lucent\Model\Model::getFirst</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
-  <tr><td><a href="Collection.php.html#24">Lucent\Model\Collection::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#115">Lucent\Model\Collection::orLike</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#150">Lucent\Model\Collection::limit</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#212">Lucent\Model\Collection::count</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#219">Lucent\Model\Collection::sum</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Collection.php.html#330">Lucent\Model\Collection::registerTraitCondition</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Column.php.html#33">Lucent\Model\Column::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#353">Lucent\Model\Model::hasDatabaseProperty</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#397">Lucent\Model\Model::where</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#415">Lucent\Model\Model::limit</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#455">Lucent\Model\Model::in</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
-  <tr><td><a href="Model.php.html#460">Lucent\Model\Model::compare</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
- </tbody>
-</table>
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+         <th class="text-right">Complexity</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Model.php.html#11">Lucent\Model\Model</a></td><td class="text-right">70.1%</td><td class="text-right">82</td><td class="text-right">261</td></tr>
+       <tr><td><a href="Collection.php.html#14">Lucent\Model\Collection</a></td><td class="text-right">77.6%</td><td class="text-right">74</td><td class="text-right">135</td></tr>
+       <tr><td><a href="Column.php.html#10">Lucent\Model\Column</a></td><td class="text-right">84.1%</td><td class="text-right">58</td><td class="text-right">71</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2 style="margin-top: 3rem;">Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodsCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3 style="margin-top: 2rem;">Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Collection.php.html#121"><abbr title="Lucent\Model\Collection::orWhere">orWhere</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Collection.php.html#200"><abbr title="Lucent\Model\Collection::offset">offset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Collection.php.html#289"><abbr title="Lucent\Model\Collection::avg">avg</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Collection.php.html#303"><abbr title="Lucent\Model\Collection::min">min</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Collection.php.html#317"><abbr title="Lucent\Model\Collection::max">max</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#445"><abbr title="Lucent\Model\Model::orWhere">orWhere</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#453"><abbr title="Lucent\Model\Model::like">like</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#461"><abbr title="Lucent\Model\Model::orLike">orLike</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#477"><abbr title="Lucent\Model\Model::offset">offset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#485"><abbr title="Lucent\Model\Model::orderBy">orderBy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#490"><abbr title="Lucent\Model\Model::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#495"><abbr title="Lucent\Model\Model::sum">sum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#500"><abbr title="Lucent\Model\Model::avg">avg</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#505"><abbr title="Lucent\Model\Model::min">min</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#510"><abbr title="Lucent\Model\Model::max">max</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#518"><abbr title="Lucent\Model\Model::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#526"><abbr title="Lucent\Model\Model::getFirst">getFirst</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model.php.html#35"><abbr title="Lucent\Model\Model::delete">delete</abbr></a></td><td class="text-right">39%</td></tr>
+       <tr><td><a href="Column.php.html#81"><abbr title="Lucent\Model\Column::parseReferences">parseReferences</abbr></a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="Collection.php.html#331"><abbr title="Lucent\Model\Collection::resolveAggregateColumn">resolveAggregateColumn</abbr></a></td><td class="text-right">46%</td></tr>
+       <tr><td><a href="Column.php.html#115"><abbr title="Lucent\Model\Column::validateLengthNonNull">validateLengthNonNull</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Column.php.html#122"><abbr title="Lucent\Model\Column::validateEnumColumn">validateEnumColumn</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Model.php.html#418"><abbr title="Lucent\Model\Model::getDatabasePrimaryKey">getDatabasePrimaryKey</abbr></a></td><td class="text-right">62%</td></tr>
+       <tr><td><a href="Model.php.html#261"><abbr title="Lucent\Model\Model::save">save</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="Column.php.html#53"><abbr title="Lucent\Model\Column::parseValues">parseValues</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="Collection.php.html#484"><abbr title="Lucent\Model\Collection::buildLimitClause">buildLimitClause</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Collection.php.html#87"><abbr title="Lucent\Model\Collection::compare">compare</abbr></a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="Collection.php.html#387"><abbr title="Lucent\Model\Collection::buildWhereClause">buildWhereClause</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Collection.php.html#209"><abbr title="Lucent\Model\Collection::get">get</abbr></a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="Column.php.html#129"><abbr title="Lucent\Model\Column::fromProperty">fromProperty</abbr></a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="Model.php.html#105"><abbr title="Lucent\Model\Model::create">create</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="Column.php.html#152"><abbr title="Lucent\Model\Column::preProcess">preProcess</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="Collection.php.html#158"><abbr title="Lucent\Model\Collection::orderBy">orderBy</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3 style="margin-top: 2rem;">Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+         <th class="text-right">Complexity</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Model.php.html#261"><abbr title="Lucent\Model\Model::save">save</abbr></a></td><td class="text-right">70.5%</td><td class="text-right">26</td><td class="text-right">43</td></tr>
+       <tr><td><a href="Model.php.html#35"><abbr title="Lucent\Model\Model::delete">delete</abbr></a></td><td class="text-right">39.0%</td><td class="text-right">9</td><td class="text-right">27</td></tr>
+       <tr><td><a href="Collection.php.html#387"><abbr title="Lucent\Model\Collection::buildWhereClause">buildWhereClause</abbr></a></td><td class="text-right">81.4%</td><td class="text-right">21</td><td class="text-right">23</td></tr>
+       <tr><td><a href="Column.php.html#152"><abbr title="Lucent\Model\Column::preProcess">preProcess</abbr></a></td><td class="text-right">88.2%</td><td class="text-right">16</td><td class="text-right">16</td></tr>
+       <tr><td><a href="Column.php.html#53"><abbr title="Lucent\Model\Column::parseValues">parseValues</abbr></a></td><td class="text-right">71.4%</td><td class="text-right">7</td><td class="text-right">8</td></tr>
+       <tr><td><a href="Model.php.html#105"><abbr title="Lucent\Model\Model::create">create</abbr></a></td><td class="text-right">88.1%</td><td class="text-right">7</td><td class="text-right">7</td></tr>
+       <tr><td><a href="Collection.php.html#331"><abbr title="Lucent\Model\Collection::resolveAggregateColumn">resolveAggregateColumn</abbr></a></td><td class="text-right">46.7%</td><td class="text-right">4</td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model.php.html#418"><abbr title="Lucent\Model\Model::getDatabasePrimaryKey">getDatabasePrimaryKey</abbr></a></td><td class="text-right">62.5%</td><td class="text-right">5</td><td class="text-right">6</td></tr>
+       <tr><td><a href="Collection.php.html#87"><abbr title="Lucent\Model\Collection::compare">compare</abbr></a></td><td class="text-right">76.5%</td><td class="text-right">4</td><td class="text-right">4</td></tr>
+       <tr><td><a href="Collection.php.html#209"><abbr title="Lucent\Model\Collection::get">get</abbr></a></td><td class="text-right">86.7%</td><td class="text-right">4</td><td class="text-right">4</td></tr>
+       <tr><td><a href="Column.php.html#81"><abbr title="Lucent\Model\Column::parseReferences">parseReferences</abbr></a></td><td class="text-right">40.0%</td><td class="text-right">3</td><td class="text-right">4</td></tr>
+       <tr><td><a href="Column.php.html#115"><abbr title="Lucent\Model\Column::validateLengthNonNull">validateLengthNonNull</abbr></a></td><td class="text-right">50.0%</td><td class="text-right">3</td><td class="text-right">4</td></tr>
+       <tr><td><a href="Column.php.html#122"><abbr title="Lucent\Model\Column::validateEnumColumn">validateEnumColumn</abbr></a></td><td class="text-right">50.0%</td><td class="text-right">3</td><td class="text-right">4</td></tr>
+       <tr><td><a href="Collection.php.html#158"><abbr title="Lucent\Model\Collection::orderBy">orderBy</abbr></a></td><td class="text-right">88.9%</td><td class="text-right">3</td><td class="text-right">3</td></tr>
+       <tr><td><a href="Column.php.html#129"><abbr title="Lucent\Model\Column::fromProperty">fromProperty</abbr></a></td><td class="text-right">87.5%</td><td class="text-right">3</td><td class="text-right">3</td></tr>
+       <tr><td><a href="Collection.php.html#484"><abbr title="Lucent\Model\Collection::buildLimitClause">buildLimitClause</abbr></a></td><td class="text-right">75.0%</td><td class="text-right">2</td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
      </div>
     </div>
    </div>
    <footer>
     <hr/>
     <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 14.2.2</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.22</a> and <a href="https://phpunit.de/">PHPUnit 13.2.1</a> at Sat Jun 20 9:15:58 UTC 2026.</small>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 12.5.7</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.24</a> and <a href="https://phpunit.de/">PHPUnit 12.5.33</a> at Sun Aug 9 1:27:18 UTC 2026.</small>
     </p>
    </footer>
   </div>
+  <script src="../../_js/billboard.pkgd.min.js?v=12.5.7" type="text/javascript"></script>
+  <script type="application/json" id="complexity_class">[[70.12987012987013,82,"Model.php.html#11","Lucent\\Model\\Model","261.20"],[77.63157894736842,74,"Collection.php.html#14","Lucent\\Model\\Collection","135.29"],[84.14634146341463,58,"Column.php.html#10","Lucent\\Model\\Column","71.40"],[100,0,"ColumnType.php.html#5","Lucent\\Model\\ColumnType","0"]]</script>
+  <script type="application/json" id="complexity_method">[[0,1,"Collection.php.html#121","Lucent\\Model\\Collection::orWhere","2"],[0,1,"Collection.php.html#200","Lucent\\Model\\Collection::offset","2"],[0,1,"Collection.php.html#289","Lucent\\Model\\Collection::avg","2"],[0,1,"Collection.php.html#303","Lucent\\Model\\Collection::min","2"],[0,1,"Collection.php.html#317","Lucent\\Model\\Collection::max","2"],[0,1,"Model.php.html#445","Lucent\\Model\\Model::orWhere","2"],[0,1,"Model.php.html#453","Lucent\\Model\\Model::like","2"],[0,1,"Model.php.html#461","Lucent\\Model\\Model::orLike","2"],[0,1,"Model.php.html#477","Lucent\\Model\\Model::offset","2"],[0,1,"Model.php.html#485","Lucent\\Model\\Model::orderBy","2"],[0,1,"Model.php.html#490","Lucent\\Model\\Model::count","2"],[0,1,"Model.php.html#495","Lucent\\Model\\Model::sum","2"],[0,1,"Model.php.html#500","Lucent\\Model\\Model::avg","2"],[0,1,"Model.php.html#505","Lucent\\Model\\Model::min","2"],[0,1,"Model.php.html#510","Lucent\\Model\\Model::max","2"],[0,1,"Model.php.html#518","Lucent\\Model\\Model::get","2"],[0,1,"Model.php.html#526","Lucent\\Model\\Model::getFirst","2"],[39.02439024390244,9,"Model.php.html#35","Lucent\\Model\\Model::delete","27.36"],[40,3,"Column.php.html#81","Lucent\\Model\\Column::parseReferences","4.94"],[46.666666666666664,4,"Collection.php.html#331","Lucent\\Model\\Collection::resolveAggregateColumn","6.43"],[50,3,"Column.php.html#115","Lucent\\Model\\Column::validateLengthNonNull","4.12"],[50,3,"Column.php.html#122","Lucent\\Model\\Column::validateEnumColumn","4.12"],[62.5,5,"Model.php.html#418","Lucent\\Model\\Model::getDatabasePrimaryKey","6.32"],[70.51282051282051,26,"Model.php.html#261","Lucent\\Model\\Model::save","43.33"],[71.42857142857143,7,"Column.php.html#53","Lucent\\Model\\Column::parseValues","8.14"],[75,2,"Collection.php.html#484","Lucent\\Model\\Collection::buildLimitClause","2.06"],[76.47058823529412,4,"Collection.php.html#87","Lucent\\Model\\Collection::compare","4.21"],[81.3953488372093,21,"Collection.php.html#387","Lucent\\Model\\Collection::buildWhereClause","23.84"],[86.66666666666667,4,"Collection.php.html#209","Lucent\\Model\\Collection::get","4.04"],[87.5,3,"Column.php.html#129","Lucent\\Model\\Column::fromProperty","3.02"],[88.09523809523809,7,"Model.php.html#105","Lucent\\Model\\Model::create","7.08"],[88.23529411764706,16,"Column.php.html#152","Lucent\\Model\\Column::preProcess","16.42"],[88.88888888888889,3,"Collection.php.html#158","Lucent\\Model\\Collection::orderBy","3.01"],[90,3,"Collection.php.html#129","Lucent\\Model\\Collection::like","3.01"],[90.9090909090909,3,"Collection.php.html#43","Lucent\\Model\\Collection::where","3.01"],[90.9090909090909,3,"Collection.php.html#65","Lucent\\Model\\Collection::in","3.01"],[91.66666666666666,3,"Model.php.html#204","Lucent\\Model\\Model::buildInsertQueryString","3.01"],[92.85714285714286,7,"Column.php.html#94","Lucent\\Model\\Column::validateColumn","7.02"],[100,1,"Collection.php.html#29","Lucent\\Model\\Collection::__construct","1"],[100,1,"Collection.php.html#150","Lucent\\Model\\Collection::orLike","1"],[100,3,"Collection.php.html#175","Lucent\\Model\\Collection::formatColumnName","3"],[100,1,"Collection.php.html#191","Lucent\\Model\\Collection::limit","1"],[100,3,"Collection.php.html#240","Lucent\\Model\\Collection::getFirst","3"],[100,1,"Collection.php.html#261","Lucent\\Model\\Collection::count","1"],[100,1,"Collection.php.html#271","Lucent\\Model\\Collection::sum","1"],[100,1,"Collection.php.html#357","Lucent\\Model\\Collection::buildQuery","1"],[100,2,"Collection.php.html#370","Lucent\\Model\\Collection::buildFromClause","2"],[100,3,"Collection.php.html#469","Lucent\\Model\\Collection::buildOrderByClause","3"],[100,1,"Collection.php.html#495","Lucent\\Model\\Collection::registerTraitCondition","1"],[100,4,"Collection.php.html#503","Lucent\\Model\\Collection::class_uses_recursive","4"],[100,1,"Column.php.html#34","Lucent\\Model\\Column::__construct","1"],[100,15,"Column.php.html#181","Lucent\\Model\\Column::postProcess","15"],[100,4,"Model.php.html#13","Lucent\\Model\\Model::hydrate","4"],[100,7,"Model.php.html#236","Lucent\\Model\\Model::getProperties","7"],[100,1,"Model.php.html#390","Lucent\\Model\\Model::hasDatabaseProperty","1"],[100,4,"Model.php.html#400","Lucent\\Model\\Model::getDatabaseProperties","4"],[100,1,"Model.php.html#437","Lucent\\Model\\Model::where","1"],[100,1,"Model.php.html#469","Lucent\\Model\\Model::limit","1"],[100,1,"Model.php.html#534","Lucent\\Model\\Model::in","1"],[100,1,"Model.php.html#542","Lucent\\Model\\Model::compare","1"]]</script>
+  <script type="text/javascript" defer>
+  const barLabels = [
+    '0%',
+    '0-10%',
+    '10-20%',
+    '20-30%',
+    '30-40%',
+    '40-50%',
+    '50-60%',
+    '60-70%',
+    '70-80%',
+    '80-90%',
+    '90-100%',
+    '100%'
+  ];
+  const barConfig = (name, fullName, values) => ({
+    axis: {
+      x: {
+        type: "category",
+        categories: barLabels,
+      },
+      y: {
+        label: {
+          text: `#${name}`,
+          position: 'outer-top',
+        },
+      },
+    },
+    bindto: `#${name}CoverageDistribution`,
+    data: {
+      columns: [
+        [fullName].concat(values),
+      ],
+      colors: {
+        [fullName]: "rgba(69, 114, 167, 0.75)",
+      },
+      type: "bar",
+    },
+    bar: {
+      width: {
+        ratio: 0.9,
+      },
+    },
+    grid: {
+      focus: {
+        show: false,
+      },
+      x: {
+        show: true,
+      },
+      y: {
+        show: true,
+      },
+    },
+    legend: {
+      show: false,
+    },
+    tooltip: {
+      contents: function (data) {
+        return `<table class="bb-tooltip"><tbody>
+            <tr><th colspan="2">Coverage ${barLabels[data[0].x]}</th></tr>
+            <tr><td class="value">${data[0].value} ${name}</td></tr>
+          </tbody></table>`;
+      },
+      grouped: false,
+    },
+  });
+  bb.generate(
+    barConfig('classes', "Class Coverage", [0,0,0,0,0,0,0,0,2,1,0,1])
+  );
+  bb.generate(
+    barConfig('methods', "Method Coverage", [17,0,0,0,1,2,2,1,4,6,5,22])
+  );
+
+  const scatterConfig = (name, complexityData) => ({
+    axis: {
+      x: {
+        label: {
+          text: 'Code Coverage (in percent)',
+          position: 'outer-right',
+        },
+        tick: {
+          values: [0, 20, 40, 60, 80, 100],
+        },
+      },
+      y: {
+        label: {
+          text: 'Cyclomatic Complexity',
+          position: 'outer-top',
+        },
+        min: 0,
+        padding: {
+          bottom: 0,
+          top: 5,
+        },
+      },
+    },
+    bindto: `#${name}Complexity`,
+    data: {
+      columns: [
+        ["complexity_x"].concat(complexityData.map(d => d[0])),
+        ["complexity"].concat(complexityData.map(d => d[1])),
+      ],
+      onclick: function(data, element) {
+        window.location = complexityData[data.index][2];
+      },
+      type: "scatter",
+      xs: {
+        "complexity": "complexity_x",
+      },
+    },
+    grid: {
+      focus: {
+        show: true,
+        y: true,
+      },
+      x: {
+        show: true,
+      },
+      y: {
+        show: true,
+      },
+    },
+    legend: {
+      show: false,
+    },
+    tooltip: {
+      contents: function (data) {
+        const coverage = Math.round(data[0].x);
+        const complexity = data[0].value;
+        const targetName = complexityData[data[0].index][3];
+        const crap = complexityData[data[0].index][4];
+        return `<table class="bb-tooltip"><tbody>
+            <tr><th colspan="2">${targetName}</th></tr>
+            <tr class="bb-tooltip-name-complexity"><td>Coverage</td><td class="name">${coverage}%</td></tr>
+            <tr class="bb-tooltip-name-complexity"><td>Complexity</td><td class="value">${complexity}</td></tr>
+            <tr class="bb-tooltip-name-complexity"><td>Crap</td><td class="value">${crap}</td></tr>
+          </tbody></table>`;
+      },
+      grouped: false,
+    },
+  });
+  const classComplexityData = JSON.parse(document.getElementById('complexity_class').textContent);
+  bb.generate(
+    scatterConfig("class", classComplexityData)
+  );
+  const methodComplexityData = JSON.parse(document.getElementById('complexity_method').textContent);
+  bb.generate(
+    scatterConfig("method", methodComplexityData),
+  );
+  </script>
  </body>
 </html>
